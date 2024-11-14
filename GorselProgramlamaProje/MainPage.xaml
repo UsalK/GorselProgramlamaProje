@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaProje.MainPage"
+             Title="Ana Sayfa">
+
+
+    <ContentPage.Resources>
+
+        <Style TargetType="Label">
+
+            <Setter Property="FontFamily" Value="Poppins"></Setter>
+
+        </Style>
+
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center"
+                 
+                 
+                 
+                 Spacing="15"
+    
+                 
+                 >
+        <Label Text="Merhaba"
+               FontSize="24"
+               TextColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <Frame Padding="0" BorderColor="Black" HasShadow="False" CornerRadius="100"
+                
+        WidthRequest="210"
+               
+               >
+
+            <Image
+            
+    
+            HorizontalOptions="Fill"
+            Source="usalkpasa.jpg"
+            WidthRequest="210"
+            HeightRequest="280"
+            
+            
+            
+            ></Image>
+
+
+        </Frame>
+
+        <Frame
+            
+            Padding="0"
+            BackgroundColor="SandyBrown"
+            HeightRequest="50"
+            WidthRequest="2000"
+            >
+
+            <Label
+            
+            Text="Hüseyin Karataştan"
+            FontSize="25"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            
+            
+            ></Label>
+
+        </Frame>
+
+        <Label
+            Text="Bartın Üniversitesi Bilgisayar Mühendisliği"
+                        VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            FontSize="18"
+            
+            ></Label>
+
+        <Label
+            Text="ÖDEV 1"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            FontSize="28"
+            
+            ></Label>
+
+
+    </StackLayout>
+
+</ContentPage>

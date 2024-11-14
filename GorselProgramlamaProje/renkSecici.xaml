@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaProje.renkSecici"
+             Title="Renk Seçici">
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20" Padding="20">
+            <Label Text="Kırmızı" TextColor="Red"/>
+            <Slider Minimum="0" Maximum="255" WidthRequest="255" ThumbColor="Red" MinimumTrackColor="Red" x:Name="redSlider" ValueChanged="redSlider_ValueChanged"/>
+
+            <Label Text="Mavi" TextColor="Blue"/>
+            <Slider Minimum="0" Maximum="255" WidthRequest="255" ThumbColor="Blue" MinimumTrackColor="Blue" x:Name="blueSlider" ValueChanged="blueSlider_ValueChanged"/>
+
+            <Label Text="Yeşil" TextColor="Green"/>
+            <Slider Minimum="0" Maximum="255" WidthRequest="255" ThumbColor="Green" MinimumTrackColor="Green" x:Name="greenSlider" ValueChanged="greenSlider_ValueChanged"/>
+
+
+            <Frame CornerRadius="20" WidthRequest="350" x:Name="backgroundLayer">
+
+                <VerticalStackLayout HorizontalOptions="Center" Spacing="20">
+
+                    <HorizontalStackLayout HeightRequest="50" HorizontalOptions="Center">
+
+                        <Button Text="Kopyala" x:Name="copyButton" Clicked="copyButton_Clicked" HeightRequest="40"></Button>
+
+                    </HorizontalStackLayout>
+
+                    <Label WidthRequest="70" x:Name="colorCodeLabel" Text="#000000" HorizontalTextAlignment="Center" BackgroundColor="Black"/>
+                    <Button Text="Rastgele Renk Ata" Clicked="RandomButton_Clicked"/>
+                </VerticalStackLayout>
+
+            </Frame>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

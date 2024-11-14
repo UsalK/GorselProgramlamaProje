@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:GorselProgramlamaProje"
+       x:Class="GorselProgramlamaProje.AppShell">
+
+    <FlyoutItem Title="Ana Sayfa" Route="MainPage">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Kredi Hesaplama" Route="krediHesaplama">
+        <ShellContent ContentTemplate="{DataTemplate local:krediHesaplama}" />
+    </FlyoutItem>  
+    
+    <FlyoutItem Title="Vücut Kitle İndeksi" Route="VKI">
+        <ShellContent ContentTemplate="{DataTemplate local:VKI}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Renk Seçici" Route="renkSecici">
+        <ShellContent ContentTemplate="{DataTemplate local:renkSecici}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Yapılacaklar Listesi" Route="todoList">
+        <ShellContent ContentTemplate="{DataTemplate local:todoList}" />
+    </FlyoutItem>
+
+</Shell>

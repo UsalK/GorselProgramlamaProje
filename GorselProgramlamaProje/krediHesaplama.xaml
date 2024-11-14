@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaProje.krediHesaplama"
+             Title="Kredi Hesaplama">
+
+    <ScrollView>
+
+
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start"  Spacing="20"
+             Padding="20">
+
+            <StackLayout Spacing="15">
+
+                <Picker x:Name="creditTypePicker" 
+                    SelectedIndexChanged="creditTypePicker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Kredi türünü seçiniz</x:String>
+                        <x:String>İhtiyaç Kredisi</x:String>
+                        <x:String>Konut Kredisi</x:String>
+                        <x:String>Taşıt Kredisi</x:String>
+                        <x:String>Ticari Kredisi</x:String>
+                    </Picker.Items>
+                </Picker>
+
+
+                <Label FontSize="25"
+                       x:Name="krediName"
+           FontFamily="Poppins"
+           HorizontalTextAlignment="Center"
+           Text=""
+           VerticalOptions="Start" />
+
+            </StackLayout>
+            
+            
+
+
+            <Frame WidthRequest="350"
+           Padding="20"
+           VerticalOptions="StartAndExpand"
+           BackgroundColor="#454545">
+                <StackLayout>
+
+                    <Entry x:Name="kredi"
+                   Placeholder="Kredi Tutarı (TL)"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center" />
+
+                    <Entry x:Name="oran"
+                   Placeholder="Faiz Oranı(%)"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center" />
+
+                    <Entry x:Name="vade"
+                   Placeholder="Vade(Ay)"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center" />
+
+                </StackLayout>
+            </Frame>
+
+            <Frame HorizontalOptions="Center"
+           Padding="20">
+                <VerticalStackLayout Spacing="20">
+                    <HorizontalStackLayout Spacing="40">
+                        <VerticalStackLayout Spacing="20">
+                            <Label Text="Aylık Taksit" />
+                            <Label Text="Toplam Ödeme" />
+                            <Label Text="Toplam Faiz" />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Spacing="20">
+                            <Label x:Name="result1" Text="___" />
+                            <Label x:Name="result2" Text="___" />
+                            <Label x:Name="result3" Text="___" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+
+                    <Button Text="Hesapla" Clicked="Button_Clicked"></Button>
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </StackLayout>
+
+
+
+    </ScrollView>
+</ContentPage>
